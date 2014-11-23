@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/tv_receive_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2014年11月23日  19:29:20"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView 
+                android:layout_width="30dp"
+                android:layout_gravity="center"
+                android:layout_height="30dp"
+                android:background="@drawable/icon"
+                />
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我是DC"
+                android:textColor="#ff0000"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/tv_receive_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chatfrom_bg_normal"
+            android:text="你好啊,我是DC的机器人，我很聪明的，你不知道的我都知道"
+            android:textColor="#000000"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>
