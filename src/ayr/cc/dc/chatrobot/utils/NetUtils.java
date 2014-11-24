@@ -16,10 +16,21 @@ import ayr.cc.dc.chatrobot.entity.ResultEntity;
 import com.google.gson.Gson;
 
 public class NetUtils {
+	/**
+	 * API_KEY 图灵机器人网站申请
+	 */
 	private final static String API_KEY = "c97668ecf57d02e75713351dcbee7828";
-
+    
+	/***
+	 * 访问的URL,用于拼接
+	 */
 	private final static String URL = "http://www.tuling123.com/openapi/api";
 	
+	/**
+	 * 使用Gson 将返回的json字符串封装成实体类
+	 * @param sendMesage 用户发送的信息
+	 * @return 服务器返回的数据封装的实体类
+	 */
 	public static ChatEntity getChatEntity(String sendMesage){
 		ChatEntity entity = new ChatEntity();
 		String message = getResult(sendMesage);
@@ -36,6 +47,11 @@ public class NetUtils {
 		return entity;
 	}
 
+	/**
+	 * 获取返回的字符串
+	 * @param sendMesage 用户发送的信息
+	 * @return 服务器返回的数据
+	 */
 	public static String getResult(String sendMesage) {
 		String result = "";
 		HttpURLConnection conn  = null;
@@ -76,8 +92,10 @@ public class NetUtils {
 		return result;
 	}
 
-	/*
-	 *拼接URL 
+	/**
+	 * 拼接URL 
+	 * @param sendMessage 用户输入的信息
+	 * @return 拼接后的URRL
 	 */
 	public static String getUrl(String sendMessage) {
 		String requesturl = "";
